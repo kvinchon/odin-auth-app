@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  if currentUser
+    h1 Welcome back #{currentUser.username}!
+  else
+    h1= title
+    p Welcome to #{title}!
+    p Click 
+      a(href='/login') here 
+      | to log in.
+    p Don't have an account yet? 
+      a(href='/signup') Sign up
